@@ -1,7 +1,7 @@
 # PowerPoint data extraction
 
-## Motivation: extract all slide titles and presenter notes from a PPTX file
-## E.g. to have them available as a teleprompter text
+## Motivation: extract all slide titles, presenter notes and URLs from a PPTX file
+For example, to have them available as a teleprompter text
 
 Steps:
 
