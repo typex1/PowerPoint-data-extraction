@@ -2,9 +2,15 @@ import collections
 import collections.abc
 from pptx import Presentation
 import re
+import sys
 
-file = './Module5.pptx'
-ppt=Presentation(file)
+if len(sys.argv) == 2:
+        input_file = sys.argv[1]
+else:
+        print ("usage: "+sys.argv[0]+" <pptx filename>")
+        exit(1)
+
+ppt=Presentation(input_file)
 notes = []
 
 for page, slide in enumerate(ppt.slides):
@@ -17,7 +23,11 @@ for page, slide in enumerate(ppt.slides):
         #print("TST: Slide {}, length {}".format(int(page)+1, len(slide.shapes.placeholders)))
         text_frame_text = slide.shapes.placeholders[1].text_frame.text
     except Exception as error:
-        text_frame_text = slide.shapes.placeholders[0].text_frame.text
+        try:
+            text_frame_text = slide.shapes.placeholders[0].text_frame.text
+        except:
+            # slide does not contain any text, only title:
+            text_frame_text=""
         
     print("\n-------\n### Slide {}: {}\n\n{}".format(int(page)+1, text_frame_text, text_notes))
     # Use re.findall() to extract all matches
