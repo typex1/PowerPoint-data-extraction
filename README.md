@@ -12,7 +12,7 @@ pip install python-pptx
 
 * Run Python script:
 ```
-python3 ./1-extract-presenter-notes.py
+python3 ./1-extract-presenter-notes.py <pptx filename>
 ```
 
 Apart from slide data extraction, you can even create slides content - see more details here: https://python-pptx.readthedocs.io/en/latest/user/quickstart.html
