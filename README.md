@@ -12,8 +12,8 @@ pip install python-pptx
 
 * Run Python script:
 ```
-python3 ./1-extract-presenter-notes.py <pptx filename>
+python3 ./1-extract-presenter-notes.py <filename>.pptx
 ```
-The output will be saved in **Mardown** format as filename_presenter_notes.md
+The output will be saved in **Mardown** format as <filename>_presenter_notes.md
 
 Apart from slide data extraction, you can even create slides content - see more details here: https://python-pptx.readthedocs.io/en/latest/user/quickstart.html
