@@ -12,7 +12,7 @@ pip install python-pptx
 
 * Run Python script:
 ```
-python3 ./1-extract-presenter-notes.py <filename>.pptx
+python3 ./3-extract-presenter-notes.py <filename>.pptx
 ```
 The output will be saved in **Mardown** format as <filename>_presenter_notes.md
 
